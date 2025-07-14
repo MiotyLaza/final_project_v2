@@ -1,0 +1,30 @@
+-creer base de donnee:
+    .creer table:
+    1- final_project_membre(id_membre, nom , date de naissance, genre, émail, ville, mdp, image_profil) (ok)
+    2- final_project_categorie_objet (id_categorie, nom_categorie ) (ok)
+    3- final_project_objet (id_objet , nom_objet , id_categorie, id_membre) (ok)
+    4- final_project_images_objet(id_image, id_objet, nom_image) (ok)
+    5- final_project_emprunt(id_emprunt, id_objet, id_membre, date_emprunt, date_retour) (ok)
+    .inserer donnee:
+    4  membres (ok)
+    4 catégories ( esthétique, bricolage, mécanique , cuisine ) (ok)
+    10 objets par membre à répartir sur les catégories (ok)
+    10 emprunts (ok)
+-creer pages:
+    .login:(verification de l'identifiant(mail et mdp)) (ok)
+        structure:inc/traitement(traitement_login.php,connexion.php)
+                    pages(index.php)
+                    liens vers inscription.php
+                    si ok redirection vers liste_objet.php
+    .inscription:(insertion des donnees de l'utilisateur(crea auto id,nom , dtn,genre, mail, ville,mdp,image_profil)) (ok)
+        structure:pages(inscription.php)
+                    inc(traitement:traitement_inscription.php)    
+            if donnee complet retour vers login+message inscription reussi 
+            else reste sur inscription + message d'erreur
+    .listes  des objets:(affichage des objets avec date de retour siemprunt en cours,affichage  sousforme de  tableau:nom_categorie(final-project_categorie_objet), nom_objet (final_project_objet),nom(final-project_membre),date_emprunt(final-project_emprunt),date_retour(final-project_emprunt),nom_image(final-project_images_objet)) (ok)
+        structure:pages(liste_objet.php),traitement(traitement_liste_objet)
+        deconnexion(lien vers login + reinitialisation de la session)
+    .Filtre par catégorie(affiche la listes des objets  avec possibilite de filtrer l'affichage par categorie)
+        structure:pages(filtre_categorie.php),traitement(traitement_filtre.php)
+        v3
+        
