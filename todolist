@@ -26,5 +26,5 @@
         deconnexion(lien vers login + reinitialisation de la session)
     .Filtre par catégorie(affiche la listes des objets  avec possibilite de filtrer l'affichage par categorie)
         structure:pages(filtre_categorie.php),traitement(traitement_filtre.php)
-        v3
+    
         
